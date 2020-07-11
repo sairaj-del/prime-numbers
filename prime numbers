@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,i,flag=1;      \\Taking input from the user
+	printf("Enter a number : ");
+	scanf("%d",&n);
+	for(i=2;i<=sqrt(n);i++)   \\Executing the for loop
+	{
+		if(n%i==0)   \\Condition for the for loop
+		{
+			flag=0;
+			break;
+		}
+	}
+	if(flag==1)      \\Printing the desired output
+	{
+		printf("%d is a prime number ",n);
+	}
+	else
+	{
+		printf("%d is not a prime number ",n);
+	}
+	return 0;
+}
